@@ -13,20 +13,20 @@ Trilingual (Kurdish Sorani · Arabic · English) dashboard for managing shipment
 | Libraries (loaded from CDN when exporting PDF) | html2canvas, jsPDF |
 | Fonts (Google Fonts) | Source Sans 3, Libre Franklin, IBM Plex Mono, Noto Sans Arabic, Noto Kufi Arabic |
 
-## Structure
+## Structure (flat, all files in the repository root)
 ```
-index.html          page shell, loads the scripts in order
-css/style.css       all styles
-js/i18n.js          translation store
-js/lang/ku.js       Kurdish (Sorani, RTL)
-js/lang/en.js       English (LTR)
-js/lang/ar.js       Arabic (RTL)
-js/data.js          sample reference lists (goods, cities, origins, merchants)
-js/icons.js         SVG icons
-js/app.js           state, rendering, events, PDF export
-assets/             logo.png, banner.jpg, login-bg.jpg
+index.html   page shell, loads the scripts in order
+style.css    all styles
+i18n.js      translation store
+ku.js        Kurdish (Sorani, RTL)
+en.js        English (LTR)
+ar.js        Arabic (RTL)
+data.js      sample reference lists
+icons.js     SVG icons
+app.js       state, rendering, events, PDF export
+logo.png, banner.jpg, login-bg.jpg
 ```
-Script order matters: `i18n → lang/* → data → icons → app`.
+Script order matters: `i18n → ku/en/ar → data → icons → app`.
 
 ## Run locally
 Open through a local server (browsers block some features on `file://`):
